@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #282828;
+            color: #ffffff;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #00bfff;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #009acd;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Like Predictor</h2>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="views">Views:</label>
+                <input type="number" id="views" name="views" required>
+            </div>
+            <div class="form-group">
+                <label for="dislikes">Dislikes:</label>
+                <input type="number" id="dislikes" name="dislikes" required>
+            </div>
+            <div class="form-group">
+                <label for="comment_count">Comment Count:</label>
+                <input type="number" id="comment_count" name="comment_count" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="genre">Genre:</label>
+                <select id="genre" name="genre" required>
+                    <option value="0">Autos & Vehicles</option>
+                    <option value="1">Comedy</option>
+                    <option value="2">Education</option>
+                    <option value="3">Entertainment</option>
+                    <option value="4">Film & Animation</option>
+                    <option value="5">Gaming</option>
+                    <option value="6">Howto & Style</option>
+                    <option value="7">Music</option>
+                    <option value="8">News & Politics</option>
+                    <option value="9">Nonprofits & Activism</option>
+                    <option value="10">People & Blogs</option>
+                    <option value="11">Pets & Animals</option>
+                    <option value="12">Science & Technology</option>
+                    <option value="13">Shows</option>
+                    <option value="14">Sports</option>
+                    <option value="15">Travel & Events</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Predict Likes">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

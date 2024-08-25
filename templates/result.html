@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Likes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-container {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .result-container h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .result-container p {
+            font-size: 24px;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #00bfff;
+        }
+
+        .result-container a {
+            color: #00bfff;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 2px solid #00bfff;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .result-container a:hover {
+            background-color: #00bfff;
+            color: #121212;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Predicted Likes</h2>
+        <p>{{ pred }}</p>
+        <a href="{{ pred }}">Predict Again</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Analysis Project</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .navbar {
+            background-color: #1c1c1c;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff0000;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .option-button {
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .option-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="analytical">YouTube Analytics</a></li>
+            <li><a href="#predictor">Like Predictor</a></li>
+            <li><a href="contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>YouTube Analysis Project</h1>
+        <div class="button-container">
+            <a href="analytical" class="option-button">YouTube Analytics</a>
+            <a href="predict" class="option-button">Like Predictor</a>
+            <a href="contact" class="option-button">Contact Us</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 YouTube Analysis Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
